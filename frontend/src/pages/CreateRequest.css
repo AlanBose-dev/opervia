@@ -1,0 +1,467 @@
+.create-request-page {
+    width: 100%;
+    max-width: var(--ov-content-max-width);
+    margin: 0 auto;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.create-request-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 24px;
+
+    margin-bottom: 30px;
+}
+
+.create-request-eyebrow {
+    margin: 0 0 8px;
+
+    color: var(--ov-primary);
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+}
+
+.create-request-header h1 {
+    margin: 0;
+
+    color: var(--ov-text);
+
+    font-size: 32px;
+    line-height: 1.15;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+}
+
+.create-request-header > div > p:last-child {
+    margin: 8px 0 0;
+
+    color: var(--ov-text-secondary);
+
+    font-size: 14px;
+}
+
+.create-request-back {
+    color: var(--ov-text-secondary);
+
+    font-size: 13px;
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.create-request-back:hover {
+    color: var(--ov-primary);
+}
+
+
+/* ================================
+   LAYOUT
+================================ */
+
+.create-request-layout {
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) 300px;
+
+    gap: 20px;
+
+    align-items: start;
+}
+
+
+/* ================================
+   FORM CARD
+================================ */
+
+.create-request-card {
+    padding: 26px;
+
+    border: 1px solid var(--ov-border);
+    border-radius: var(--ov-radius-md);
+
+    background: var(--ov-surface);
+
+    box-shadow: var(--ov-shadow-sm);
+}
+
+.create-request-card-header {
+    margin-bottom: 26px;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid var(--ov-border);
+}
+
+.create-request-card-header h2 {
+    margin: 0;
+
+    color: var(--ov-text);
+
+    font-size: 17px;
+    font-weight: 650;
+}
+
+.create-request-card-header p {
+    margin: 5px 0 0;
+
+    color: var(--ov-text-muted);
+
+    font-size: 13px;
+}
+
+
+/* ================================
+   FORM FIELDS
+================================ */
+
+.create-field {
+    margin-bottom: 20px;
+}
+
+.create-field label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--ov-text);
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.create-field input,
+.create-field textarea,
+.create-field select {
+    width: 100%;
+
+    border: 1px solid var(--ov-border);
+    border-radius: var(--ov-radius-sm);
+
+    background: var(--ov-surface);
+    color: var(--ov-text);
+
+    font-family: inherit;
+    font-size: 13px;
+
+    outline: none;
+
+    transition:
+        border-color 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+.create-field input,
+.create-field select {
+    height: 46px;
+
+    padding: 0 13px;
+}
+
+.create-field textarea {
+    min-height: 145px;
+
+    padding: 12px 13px;
+
+    resize: vertical;
+
+    line-height: 1.6;
+}
+
+.create-field input::placeholder,
+.create-field textarea::placeholder {
+    color: var(--ov-text-muted);
+}
+
+.create-field input:focus,
+.create-field textarea:focus,
+.create-field select:focus {
+    border-color: var(--ov-primary);
+
+    box-shadow: 0 0 0 3px var(--ov-primary-soft);
+}
+
+.create-field small {
+    display: block;
+
+    margin-top: 7px;
+
+    color: var(--ov-text-muted);
+
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+
+/* Two fields */
+
+.create-fields-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 16px;
+}
+
+
+/* ================================
+   MESSAGE
+================================ */
+
+.create-request-message {
+    padding: 12px 14px;
+
+    margin-bottom: 20px;
+
+    border-radius: var(--ov-radius-sm);
+
+    font-size: 13px;
+}
+
+.create-success {
+    border: 1px solid rgba(22, 163, 74, 0.20);
+
+    background: rgba(22, 163, 74, 0.08);
+
+    color: var(--ov-success);
+}
+
+.create-error {
+    border: 1px solid rgba(220, 38, 38, 0.20);
+
+    background: rgba(220, 38, 38, 0.08);
+
+    color: var(--ov-danger);
+}
+
+
+/* ================================
+   ACTIONS
+================================ */
+
+.create-request-actions {
+    display: flex;
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    padding-top: 4px;
+}
+
+.create-cancel-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 44px;
+
+    padding: 0 16px;
+
+    border: 1px solid var(--ov-border);
+    border-radius: var(--ov-radius-sm);
+
+    background: var(--ov-surface);
+
+    color: var(--ov-text-secondary);
+
+    font-size: 13px;
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.create-cancel-button:hover {
+    background: var(--ov-surface-soft);
+
+    color: var(--ov-text);
+}
+
+.create-submit-button {
+    min-height: 44px;
+
+    padding: 0 18px;
+
+    border: none;
+    border-radius: var(--ov-radius-sm);
+
+    background: var(--ov-primary);
+    color: white;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.create-submit-button:hover:not(:disabled) {
+    background: var(--ov-primary-hover);
+}
+
+.create-submit-button:disabled {
+    opacity: 0.65;
+
+    cursor: not-allowed;
+}
+
+
+/* ================================
+   INFO PANEL
+================================ */
+
+.create-request-info {
+    padding: 22px;
+
+    border: 1px solid var(--ov-border);
+    border-radius: var(--ov-radius-md);
+
+    background: var(--ov-surface-soft);
+}
+
+.create-info-icon {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 16px;
+
+    border-radius: 10px;
+
+    background: var(--ov-primary-soft);
+    color: var(--ov-primary);
+
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.create-request-info h3 {
+    margin: 0 0 8px;
+
+    color: var(--ov-text);
+
+    font-size: 15px;
+    font-weight: 650;
+}
+
+.create-request-info > p {
+    margin: 0;
+
+    color: var(--ov-text-secondary);
+
+    font-size: 12px;
+    line-height: 1.65;
+}
+
+.create-info-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+
+    margin-top: 22px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid var(--ov-border);
+}
+
+.create-info-list div {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 10px;
+}
+
+.create-info-list span {
+    width: 26px;
+    height: 26px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--ov-border);
+
+    border-radius: 7px;
+
+    background: var(--ov-surface);
+
+    color: var(--ov-primary);
+
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.create-info-list p {
+    margin: 4px 0 0;
+
+    color: var(--ov-text-secondary);
+
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 900px) {
+    .create-request-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .create-request-info {
+        order: 2;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .create-request-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .create-request-header h1 {
+        font-size: 28px;
+    }
+
+    .create-request-card {
+        padding: 22px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .create-request-header h1 {
+        font-size: 26px;
+    }
+
+    .create-request-card {
+        padding: 18px;
+    }
+
+    .create-fields-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .create-request-actions {
+        flex-direction: column-reverse;
+    }
+
+    .create-cancel-button,
+    .create-submit-button {
+        width: 100%;
+    }
+}
